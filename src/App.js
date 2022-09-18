@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { Col, Container, Row } from "react-bootstrap";
+import {Hasil, ListCategories, NavbarComponent} from "./components";
+import Jumbotron from "./components/Jumbotron";
+import ProdukMakanan from "./components/ProdukMakanan";
+import Video from "./components/Video";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <NavbarComponent/>
+     {/* <div className="mt-2">
+       <Container fluid>
+       <Row>
+       <ListCategories/>
+       <Col>
+         <h4>DAFTAR</h4>
+         <hr/>
+       </Col>
+       <Hasil/>
+     </Row>
+       </Container>
+     </div> */}
+     <div>
+       <Jumbotron/>
+     </div>
+
+     {/* <div className="mt-2">
+       <Container fluid>
+       <Row>
+       <ListCategories/>
+       <Col>
+         <h4>DAFTAR</h4>
+         <hr/>
+       </Col>
+       <Hasil/>
+     </Row>
+       </Container>
+     </div> */}
+
+     <div>
+       <ProdukMakanan/>
+     </div>
     </div>
   );
 }
